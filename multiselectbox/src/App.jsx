@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
 import axios from "axios";
+import SelectUser from "./components/SelectUser";
+
 
 function App() {
   const [user, setUsers] = useState([]);
@@ -64,15 +64,13 @@ function App() {
     // })
     // console.log(filteredarr);
 
-
-
-
-
   };
+
+
 
   return (
     <>
-      <div style={{}}>
+      <div style={{border:"3px solid red"}}>
         <button onClick={handleSubmit}>Submit</button>
         {user &&
           user.map((p) => (
@@ -90,6 +88,7 @@ function App() {
             </>
           ))}
       </div>
+      <SelectUser/>
     </>
   );
 }
