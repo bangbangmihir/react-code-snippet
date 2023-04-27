@@ -64,7 +64,7 @@ function App() {
     // })
     // console.log(filteredarr);
 
-    
+
 
 
 
@@ -85,7 +85,7 @@ function App() {
                 <div>{p.name}</div>
                 <div>{p.username}</div>
                 <div>{p.website}</div>
-                <input type="checkbox" onChange={() => onChange(p.id)} />
+                <input type="checkbox" checked={p.checked} onChange={() => onChange(p.id)} />
               </div>
             </>
           ))}
